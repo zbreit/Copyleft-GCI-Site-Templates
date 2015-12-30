@@ -1,0 +1,122 @@
+/*zachB Additions*/
+
+.user-info-popup {
+	width: 400px;
+	height: 300px;
+	position: absolute;
+	background-color: white;
+	border-radius: .5%;
+	color: black;
+	margin-bottom: 10px;
+  	left: 50vw;
+  	top: 50vh;
+  	-webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  	box-shadow: 0 0 20px black;
+}
+
+#dimming-mask.dimming-mask-active
+{
+	pointer-events: all;
+	opacity: 1;
+}
+
+#dimming-mask
+{
+	z-index: 100;
+	opacity: 0;
+	top: 0; left: 0; right: 0; bottom: 0;
+	position: fixed;
+	background-color: rgba(0,0,0, .6);
+	pointer-events: none;
+	transition: opacity .5s ease-in-out;
+}
+
+
+.popup-content
+{
+	font: 12px Orbitron, Arial, sans-serif;
+	margin: 1.25em 1.75em;
+}
+
+.popup-header h4
+{
+	font-size: 32px;
+	float: left;
+}
+.popup-header img
+{
+	float: right;
+	margin-bottom: 1em;
+}
+
+.chat-title
+{
+	text-align: center;
+	color: #00aaff;
+	font-size: 2em;
+	font-weight: 100;
+	line-height: .2em;
+}
+
+.u-info-title {
+	display: inline-block;
+	font-weight: 800;
+	font-size: 1.2em;
+	line-height: 0;
+}
+
+hr {
+
+	clear: both;
+	color: black;
+	background-color: rgba(0,0,0,.45);
+	height: 1px;
+	border: none;
+	
+}
+
+.username-container .jid-user,
+.username-container .jid-host,
+.password-container .password {
+	color: rgba(0,0,0,.45);
+}
+
+#exit-btn{
+	position: absolute;
+	display: block;
+	cursor: pointer;
+	transition: all .2s ease-in-out;
+	font-size: 1.5em;
+}
+#exit-btn:hover {
+	transform: scale(1.25);
+}
+
+#view-user-info {
+	float: left;
+}
+
+/* Nick Gallagher Clearfix */
+
+#view-user-info:before,
+#view-user-info:after {
+	content: "";
+	display: table;
+}
+
+#view-user-info:after {
+	content: "";
+	clear: both;
+}
+
+#view-user-info:hover {
+	color: white;
+}
+
+#view-user-info,
+#userpic {
+	cursor: pointer;
+}
+
