@@ -27,9 +27,15 @@
         <script type="text/javascript">
           <xsl:text disable-output-escaping='yes'>
           //  &lt;![CDATA[
+
+
+
+
+
+            //These are my changes
             var dimmingMask = null;
             var prevOnload = window.onload
-            window.onload () {
+            window.onload = {
                 dimmingMask = document.getElementById("dimming-mask");
                 prevOnload();
             };
@@ -47,6 +53,13 @@
                     closePopup();
                 }
             }
+
+
+
+
+
+
+
 
             function scrollTest() {
               var sc = window.pageYOffset;
@@ -91,9 +104,6 @@
         <xsl:if test="$onload != ''">
           <xsl:attribute name="onload">
             <xsl:value-of select="$onload"/>
-            <xsl:text disable-output-escaping="yes">
-              &#44; getDimMaskVal&#40;&#41;
-            </xsl:text>
           </xsl:attribute>
         </xsl:if>
 
