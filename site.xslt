@@ -27,17 +27,9 @@
         <script type="text/javascript">
           <xsl:text disable-output-escaping='yes'>
           //  &lt;![CDATA[
-
-
-
-
-
-            //These are my changes
             var dimmingMask = null;
-            var prevOnload = window.onload
-            window.onload = {
+            window.onload () {
                 dimmingMask = document.getElementById("dimming-mask");
-                prevOnload();
             };
 
             function openPopup() {
@@ -53,13 +45,6 @@
                     closePopup();
                 }
             }
-
-
-
-
-
-
-
 
             function scrollTest() {
               var sc = window.pageYOffset;
